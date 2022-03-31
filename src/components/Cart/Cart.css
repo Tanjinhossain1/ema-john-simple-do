@@ -1,0 +1,11 @@
+.cart{
+    position: sticky;
+    top: 0;
+}
+.cart h4{
+    display: flex;
+    justify-content: center;
+}
+.pera-contain{
+    margin-left: 30px;
+}

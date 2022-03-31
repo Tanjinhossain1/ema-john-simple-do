@@ -1,0 +1,57 @@
+.ok{
+    height: 100%;
+}
+.order-container{
+    border: 4px solid gray;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    width: 75%;
+}
+.order-container img{
+    width: 150px;
+    
+}
+.detail{
+    margin-left: 50px;
+   
+}
+.detail p{
+    margin: 0;
+}
+.detail h1{
+    margin: 0;
+}
+.detail span{
+    color: rgb(243, 9, 173);
+    font-weight: 700;
+}
+.child-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.child-container button{
+   height: 55px;
+   width: 55px;
+   border-radius: 50%;
+   border: 1px solid pink;
+   background-color: pink;
+   color: rgb(230, 73, 99);
+}
+.review-orders {
+    background-color: pink;
+    border: 1px solid pink;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+.review-orders:hover{
+    background-color: rgb(91, 22, 155);
+    cursor: pointer;
+}
