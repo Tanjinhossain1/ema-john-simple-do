@@ -7,7 +7,15 @@
     padding-left: 140px;
     padding-right: 140px;
 }
-
+.header button{
+    background-color: #1C2B35;
+    border: 0;
+    color: white;
+    margin-left: 36px;
+}
+.header button:hover{
+   color: orange;
+}
 .header a{
     color: #FFFFFF;
     text-decoration: none;

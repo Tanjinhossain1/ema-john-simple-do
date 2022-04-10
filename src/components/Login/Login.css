@@ -1,0 +1,68 @@
+.form-container {
+    border: 1px solid gray;
+    width: 500px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container h2 {
+    font-size: 35px;
+    font-weight: 400;
+    color: rgba(42, 65, 79, 1);
+}
+
+.form-group label {
+    display: block;
+   
+}
+.form-group input{
+    width: 415px;
+    height: 55px;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.submit-button{
+    width: 415px;
+    height: 60px;
+    background-color: rgba(255, 153, 0, 0.3);
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.or-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.or-container p{
+   color: rgb(185, 185, 185);
+}
+.or-left{
+    margin-right: 20px;
+    border: 1px solid rgb(207, 204, 204);
+    width: 145px;
+}
+.or-right{
+    margin-left: 20px;
+    border: 1px solid rgb(207, 204, 204);
+    width: 145px;
+}
+.google-button button{
+    width: 415px;
+    height: 60px;
+    background-color: white;
+    font-size: 24px;
+    border: 1px solid rgb(164, 163, 163);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.google-button button img{
+    margin-right: 20px;
+}
