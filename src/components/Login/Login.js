@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css';
@@ -17,7 +17,10 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
+    const [signInWithGithub] = useSignInWithGithub(auth);
 
     const handleEmail = event => {
         setEmail(event.target.value)
@@ -26,15 +29,12 @@ const Login = () => {
         setPassword(event.target.value)
     }
 
-    if(user){
+    if (user) {
         navigate(from)
     }
     const handleOnSubmit = (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(email, password);
-        
-       
-        
     }
     return (
         <div>
@@ -51,7 +51,7 @@ const Login = () => {
                             <input onBlur={handlePassword} type="password" name="password" id="" required />
                         </div>
                         {loading && <p>Loading...</p>}
-                        <p style={{color: 'red'}}>{error?.message.slice(22,42)}</p>
+                        <p style={{ color: 'red' }}>{error?.message.slice(22, 42)}</p>
                         <input className='submit-button' type="submit" value="Login" />
                         <p>New to Ema-john? <Link to='/signup'>Create New Account</Link></p>
                     </form>
@@ -60,8 +60,11 @@ const Login = () => {
                         <p>or</p>
                         <p className='or-right'></p>
                     </div>
-                    <div className='google-button'>
+                    <div onClick={() => signInWithGoogle()} className='google-button'>
                         <button><img width={40} src="https://cutewallpaper.org/21/google-logo-png-transparent-background/Google-Logo-Background-png-download-10241024-Free-.jpg" alt="" />Continue with Google</button>
+                    </div>
+                    <div onClick={() => signInWithGithub()} className='google-button'>
+                        <button><img width={50} src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" />Continue with GitHub</button>
                     </div>
                 </div>
             </div>

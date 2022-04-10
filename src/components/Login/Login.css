@@ -31,6 +31,7 @@
     font-size: 30px;
     font-weight: 500;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 .or-container{
     display: flex;
