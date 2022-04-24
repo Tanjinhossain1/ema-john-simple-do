@@ -11,7 +11,7 @@ const Header = () => {
     const logout = () => {
         signOut(auth);
       };
-      console.log(user)
+      
     return (
         <nav className='header'>
             <img src={logo} alt="" />

@@ -9,11 +9,12 @@ import { Link } from 'react-router-dom';
 
 const Order = () => {
     const [products, setProducts] = useProducts()
-    const [cart, setCart] = useCart(products);
+    const [cart, setCart] = useCart();
+    console.log(cart)
     const removeCartItem = (product) =>{
-        const restItem = cart.filter(pd => product.id !== pd.id);
+        const restItem = cart.filter(pd => product._id !== pd._id);
         setCart(restItem)
-        removeFromDb(product.id)
+        removeFromDb(product._id)
     }
     
     return (
@@ -21,7 +22,7 @@ const Order = () => {
 
             <div className='orders-container'>
                 {
-                    cart.map(product => <ShowAddProduct removeCartItem={removeCartItem} product={product} key={product.id}></ShowAddProduct>)
+                    cart.map(product => <ShowAddProduct removeCartItem={removeCartItem} product={product} key={product._id}></ShowAddProduct>)
                 }
                 
             </div>
